@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Counter.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Pages\Contacts.razor.css" />
     <None Remove="Pages\Experiences.razor.css" />
   </ItemGroup>

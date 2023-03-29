@@ -1,24 +1,25 @@
 ﻿.center-box{
+  position: absolute;
+  left: 50%;
+  right:50%;
   display: inline-block;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  margin: auto;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 10px;
-  display-size: center
 
 }
 
-.transparent-box{
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  padding: 10px;
-  opacity: 0;
-  animation: fadeIn 5s forwards;
-  transition-duration: 12s;
+.transparent-box {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 20%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+    transition-duration: 12s;
 }
 
 @keyframes fadeIn {

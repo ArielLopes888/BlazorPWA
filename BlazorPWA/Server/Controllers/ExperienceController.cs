@@ -24,9 +24,9 @@ namespace BlazorPWA.Server.Controllers
             {
                 Company = "",
                 Description = "",
-                EndDate = DateTime.Today,
+                //EndDate = DateTime.Today,
                 Position = "",
-                StartDate = DateTime.Today,
+                //StartDate = DateTime.Today,
                 
             })
             .ToArray();

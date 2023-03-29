@@ -1,10 +1,37 @@
 ﻿.social {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 30%;
     opacity: 0;
     animation: fadeIn 1s forwards;
-    transition-duration: 5s;
-    font-size: 2em;
+    transition-duration: 10s;
+    font-size: 8em;
+}
+.icons {
+    color: white;
 }
 
+.center-box {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    display: inline-block;
+     background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
