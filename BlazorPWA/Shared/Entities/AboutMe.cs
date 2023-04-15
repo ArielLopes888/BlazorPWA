@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Shared.Entities
+namespace BlazorPWA.Shared
 {
     public class AboutMe
     {
-        private string address { get; set; }
-        private string phone { get; set; }
-        private string email { get; set; }
-        private string personalResume { get; set; }
-        private string professionalResume { get; set; }
+        public string address { get; set; }
+        public string phone { get; set; }
+        public string email { get; set; }
+        public string personalResume { get; set; }
+        public string professionalResume { get; set; }
 
     }
 }
