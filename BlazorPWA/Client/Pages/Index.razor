@@ -1,4 +1,43 @@
 ﻿@page "/"
+@inject HttpClient Http
+@using BlazorPWA.Shared
+
 
 <PageTitle>Portfolio</PageTitle>
 
+<h1>Ariel Lopes</h1>
+
+<hr />
+@if (values != null)
+{
+    @foreach (var value in values)
+    {
+        <div class="alert alert-secondary mt-4" role="alert">
+            <a href="https://www.google.com/maps/place/Aracaju,+SE/-11.0056262,-37.2683098,11z/data=!3m1!4b1!4m6!3m5!1s0x71ab04015be27cd:0x804434fd92ec3b36!8m2!3d-10.9266526!4d-37.0729014!16zL20vMDFoeTg0"
+                target="_blank"><span class="oi oi-home mr-2" aria-hidden="true"></span> @value.address </a> -
+
+            <a href="whatsapp://send?phone=@value.phone&text=Olá Ariel" data-action="share/whatsapp/share" target="_blank">
+                <span class="oi oi-phone mr-2" aria-hidden="true"></span>@value.phone
+            </a> -
+            <a href="mailto:@value.email" class="ml-md-auto"><span class="oi oi-envelope-closed mr-2"
+                    aria-hidden="true"></span>@value.email</a>
+        </div>
+    }
+}
+else
+{
+    <div class="transparent-box">
+        <p>Carregando...</p>
+    </div>
+}
+
+
+
+@code {
+    private AboutMe[]? values;
+
+    protected override async Task OnInitializedAsync()
+    {
+        values = await Http.GetFromJsonAsync<AboutMe[]>("AboutMe");
+    }
+}

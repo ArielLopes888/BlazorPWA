@@ -8,7 +8,17 @@ html, body {
     background-size: 100% 100%;
 
 }
-
+.transparent-box {
+    left: 50%;
+    top: 40%;
+    background-color: rgba(245, 235, 235, 0.836);
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+    transition-duration: 12s;
+    margin-bottom: 20px;
+}
 h1:focus {
     outline: none;
 }
@@ -67,3 +77,4 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
