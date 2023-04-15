@@ -11,6 +11,7 @@
     <Content Remove="Pages\Counter.razor" />
   </ItemGroup>
 
+
   <ItemGroup>
     <None Remove="Pages\Contacts.razor.css" />
     <None Remove="Pages\Experiences.razor.css" />
@@ -26,6 +27,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.9" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\Shared\BlazorPWA.Shared.csproj" />
   </ItemGroup>

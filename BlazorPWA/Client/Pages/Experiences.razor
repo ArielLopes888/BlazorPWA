@@ -1,6 +1,6 @@
 ﻿@page "/Experiences"
+@inject HttpClient Http
 @using BlazorPWA.Shared
-
 
 <PageTitle>Experiências</PageTitle>
 
@@ -8,33 +8,38 @@
     <h3>Experiências Profissionais</h3>
 </div>
 
-
-@if (experience != null)
+@if (experiences != null)
 {
-    <div class="transparent-box">
-        <p><strong>Posição:</strong> @experience.Position</p>
-        <p><strong>Empresa:</strong> @experience.Company</p>
-        <p><strong>Empresa:</strong> @experience.Description</p>
-    </div>
+    <table>
+        <tbody>
+            @foreach (var exp in experiences)
+            {
+                <tr>
+                    <td>
+                        <div class="transparent-box">
+                            <p><strong>Posição:</strong> @exp.Position</p>
+                            <p><strong>Empresa:</strong> @exp.Company</p>
+                            <p><strong>Descrição:</strong> @exp.Description</p>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 else
 {
-    <p>Carregando...</p>
+    <div class="transparent-box">
+        <p>Carregando...</p>
+    </div>
+
 }
 
 @code {
-    private Experience experience = new Experience()
-    {
-        Company = "Mercado ELetrônico",
-        Position = "BackEnd .NET C#",
-        Description = "- Criação de REST APIs para implementar funcionalidades em Aplicações Web de uso interno e externo." +
-                "-Manutenções evolutivas e corretivas em API's." +
-                "-Identificação e correções de bugs" +
-                "-Implementação de novos recursos e manutenção de Aplicações Web MVC " +
-                "-Realização de testes unitários com Nunit." +
-                "-Manutenção em Microsserviços em Java, com RabbitMQ e Kafka" +
-                "-Manutenção em Front com Vue.js, Html e Css"
-             
-    };
-}
+    private Experience[]? experiences;
 
+    protected override async Task OnInitializedAsync()
+    {
+        experiences = await Http.GetFromJsonAsync<Experience[]>("Experience");
+    }
+}
