@@ -14,14 +14,10 @@ body {
     left: 50%;
     top: 40%;
     width: 50%;
-
-
     margin-left: auto;
     /* Define a margem esquerda como "auto" para centralizar a div */
     margin-right: auto;
     /* Define a margem direita como "auto" para centralizar a div */
-
-
     background-color: rgba(250, 241, 241, 0.534);
     border-radius: 10px;
     padding: 10px;
