@@ -40,10 +40,10 @@ body {
 
 .circle-image {
     display: inline block;
-    border-radius: 50%;
+    border-radius: 60%;
     overflow: hidden;
-    width: 250px;
-    height: 300px;
+    width: 200px;
+    height: 250px;
 }
 
 .address-link,

@@ -1,10 +1,46 @@
 ﻿@page "/Educations"
-
+@inject HttpClient Http
+@using  BlazorPWA.Shared
 
 <PageTitle>Educations</PageTitle>
 
-<h3>Educação</h3>
+
+<div class="center-box">
+    <h3>Educação</h3>
+</div>
+
+@if (educations != null)
+{
+    <table>
+        <tbody>
+            @foreach (var x in educations)
+            {
+                <tr>
+                    <td>
+                        <div class="transparent-box">
+                            <p><strong>Posição:</strong> @x.University</p>
+                            <p><strong>Empresa:</strong> @x.Course</p>
+
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="transparent-box">
+        <p>Carregando...</p>
+    </div>
+
+}
 
 @code {
+     private Education[]? educations;
 
+    protected override async Task OnInitializedAsync()
+    {
+        educations = await Http.GetFromJsonAsync<Education[]>("Education");
+    }
 }
