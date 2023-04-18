@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Shared.Entities
+namespace BlazorPWA.Shared
 {
    public class Education
     {
