@@ -18,6 +18,17 @@ namespace Server.Controllers
                   Course = "Análise e Desenvolvimento de Sistemas"
                 },
 
+                new Education
+                {
+                  University = "Digital House",
+                  Course = "Desenvolvedor Full Stack C# .Net"
+                },
+
+                new Education
+                {
+                  University = "Udemy",
+                  Course = "Api Robusta + Deploy no Azure"
+                },
             };
             return values;
         }
