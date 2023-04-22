@@ -1,13 +1,68 @@
 ﻿@page "/Projects"
+@inject HttpClient Http
+@using BlazorPWA.Shared
+
 
 <PageTitle>Projetos</PageTitle>
 
 <div class="center-box">
-    <h3>Projetos</h3>
+    <h1>Projetos</h1>
 </div>
 
 
+@if (projects != null)
+{
+    <div class="transparent-box">
+        <h2>API'S</h2>
+        <button @onclick="(() => { showDetails = !showDetails; })">Detalhes</button>
+        @foreach (var x in projects.Take(2))
+        {
+            @if (showDetails)
+            {
+                <div>
+                    <p><strong>Nome:</strong> @x.Name</p>
+                    <p><strong>Descrição:</strong> @x.Description</p>
+                    <p><strong>Link:</strong> @x.Link</p>
+                    <hr />
+                </div>
+            }
+
+        }
+    </div>
+    <div class="transparent-box">
+        <h2>MVC</h2>
+        <button @onclick="(() => { showDetails2 = !showDetails2; })">Detalhes</button>
+        @foreach (var x in projects.Skip(2))
+        {
+            @if (showDetails2)
+            {
+                <div>
+                    <p><strong>Nome:</strong> @x.Name</p>
+                    <p><strong>Descrição:</strong> @x.Description</p>
+                    <p><strong>Link:</strong> @x.Link</p>
+                    <hr />
+                </div>
+            }
+
+        }
+    </div>
+}
+else
+{
+    <div class="transparent-box">
+        <p>Carregando...</p>
+    </div>
+
+}
+
 
 @code {
+    bool showDetails = false;
+    bool showDetails2 = false;
+    private Project[]? projects;
 
+    protected override async Task OnInitializedAsync()
+    {
+        projects = await Http.GetFromJsonAsync<Project[]>("Project");
+    }
 }
