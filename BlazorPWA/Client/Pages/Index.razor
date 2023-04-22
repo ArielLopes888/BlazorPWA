@@ -7,9 +7,9 @@
 
 <div class="center">
     <img src="/fotoperfil.jpg" class="circle-image" />
-    <div class="transparentbox">
-        <h1>Ariel Lisboa Lopes</h1>
-    </div>
+    
+        <h1>Ariel Lisboa Lopes</h1>     
+    
 </div>
 
 
@@ -37,7 +37,11 @@
                 <span class="oi oi-envelope-closed mr-2" aria-hidden="true"></span> @value.email
             </a>
         </div>
+        <div class="transparentbox">
+            <p><strong>Resumo Pessoal:</strong> @value.personalResume</p>
+            <p><strong>Resmo Profissional:</strong> @value.professionalResume</p>
 
+        </div>
     }
 }
 else
