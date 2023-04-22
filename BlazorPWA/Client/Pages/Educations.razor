@@ -6,28 +6,22 @@
 
 
 <div class="center-box">
-    <h3>Educação</h3>
+  <h3>Educação</h3>
 </div>
 
 @if (educations != null)
 {
-    <table>
-        <tbody>
-            @foreach (var x in educations)
-            {
-                <tr>
-                    <td>
-                        <div class="transparent-box">
-                            <p><strong>Posição:</strong> @x.University</p>
-                            <p><strong>Empresa:</strong> @x.Course</p>
-
-                        </div>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+  <div class="transparent-container">
+    @foreach (var x in educations)
+    {
+      <div class="transparent-box">
+        <p><strong>Instituição:</strong> @x.University</p>
+        <p><strong>Curso:</strong> @x.Course</p>
+      </div>
+    }
+  </div>
 }
+
 else
 {
     <div class="transparent-box">
