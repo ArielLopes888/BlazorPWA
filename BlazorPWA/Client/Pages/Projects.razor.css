@@ -9,6 +9,20 @@
     margin-bottom: 20px;
 
 }
+.custom-button {
+    background: #ffffffc7;
+    font-weight: 800;
+    color: #fd3838;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-button:hover {
+    transform: scale(1.1);
+  }
+  
 .custom-heading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 32px;

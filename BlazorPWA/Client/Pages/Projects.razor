@@ -14,7 +14,7 @@
 {
     <div class="transparent-box">
         <h2 class="custom-heading">API'S</h2>
-        <button @onclick="(() => { showDetails = !showDetails; })">Detalhes</button>
+        <button class="custom-button" @onclick="(() => { showDetails = !showDetails; })">Ver Projetos</button>
         @foreach (var x in projects.Take(3))
         {
             @if (showDetails)
@@ -22,7 +22,7 @@
                 <div>
                     <p><strong>Nome:</strong> @x.Name</p>
                     <p><strong>Descrição:</strong> @x.Description</p>
-                    <p><strong>Link:</strong> @x.Link</p>
+                    <p><strong>Link:</strong> <a href="@x.Link" target="_blank">@x.Link</a></p>
                     <hr />
                 </div>
             }
@@ -31,7 +31,7 @@
     </div>
     <div class="transparent-box">
         <h2 class="custom-heading">MVC</h2>
-        <button @onclick="(() => { showDetails2 = !showDetails2; })">Detalhes</button>
+        <button class="custom-button" @onclick="(() => { showDetails2 = !showDetails2; })">Ver Projetos</button>
         @foreach (var x in projects.Skip(3).Take(1))
         {
             @if (showDetails2)
@@ -39,7 +39,7 @@
                 <div>
                     <p><strong>Nome:</strong> @x.Name</p>
                     <p><strong>Descrição:</strong> @x.Description</p>
-                    <p><strong>Link:</strong> @x.Link</p>
+                    <p><strong>Link:</strong> <a href="@x.Link" target="_blank">@x.Link</a></p>
                     <hr />
                 </div>
             }
@@ -48,7 +48,7 @@
     </div>
     <div class="transparent-box">
         <h2 class="custom-heading">Blazor</h2>
-        <button @onclick="(() => { showDetails3 = !showDetails3; })">Detalhes</button>
+        <button class="custom-button" @onclick="(() => { showDetails3 = !showDetails3; })">Ver Projetos</button>
         @foreach (var x in projects.Skip(4).Take(1))
         {
             @if (showDetails3)
@@ -56,7 +56,7 @@
                 <div>
                     <p><strong>Nome:</strong> @x.Name</p>
                     <p><strong>Descrição:</strong> @x.Description</p>
-                    <p><strong>Link:</strong> @x.Link</p>
+                    <p><strong>Link:</strong> <a href="@x.Link" target="_blank">@x.Link</a></p>
                     <hr />
                 </div>
             }
@@ -65,7 +65,7 @@
     </div>
     <div class="transparent-box">
         <h2 class="custom-heading">Python</h2>
-        <button @onclick="(() => { showDetails4 = !showDetails4; })">Detalhes</button>
+        <button class="custom-button" @onclick="(() => { showDetails4 = !showDetails4; })">Ver Projetos</button>
         @foreach (var x in projects.Skip(5))
         {
             @if (showDetails4)
@@ -73,7 +73,7 @@
                 <div>
                     <p><strong>Nome:</strong> @x.Name</p>
                     <p><strong>Descrição:</strong> @x.Description</p>
-                    <p><strong>Link:</strong> @x.Link</p>
+                    <p><strong>Link:</strong> <a href="@x.Link" target="_blank">@x.Link</a></p>
                     <hr />
                 </div>
             }
