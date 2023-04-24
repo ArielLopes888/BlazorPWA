@@ -25,12 +25,27 @@ public class ProjectController : ControllerBase
             new Project
             {
                 Name="Api Projeto Integrador",
-                Description="Teste",
+                Description="Api Curso",
             },
             new Project
             {
                 Name="Cadastro de Voluntários da Congregação",
                 Description="...",
+            },
+            new Project
+            {
+                Name="Est Portfólio",
+                Description="Blazor",
+            },
+            new Project
+            {
+                Name="Python Bot Whatsapp",
+                Description="...",
+            },
+            new Project
+            {
+                Name="Automação Análise de Dados ",
+                Description="Python",
             },
         };
         return values;
