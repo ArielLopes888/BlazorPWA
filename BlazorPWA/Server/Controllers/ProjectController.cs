@@ -14,19 +14,24 @@ public class ProjectController : ControllerBase
         {
             new Project
             {
-                Name = "API",
+                Name = "Api ShopBridge",
                 Description="RESTAPI"
             },
             new Project
             {
-                Name="Teste",
-                Description="Teste"
+                Name="Api Robusta + Deploy no Azure",
+                Description="API Curso"
             },
             new Project
             {
-                Name="SGCPN",
+                Name="Api Projeto Integrador",
                 Description="Teste",
-            }
+            },
+            new Project
+            {
+                Name="Cadastro de Voluntários da Congregação",
+                Description="...",
+            },
         };
         return values;
     }
