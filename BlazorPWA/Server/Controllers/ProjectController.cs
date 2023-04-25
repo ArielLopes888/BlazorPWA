@@ -39,7 +39,7 @@ public class ProjectController : ControllerBase
             new Project
             {
                 Name="Api Projeto Integrador",
-                Description="Api feita para o projeto de conlusão do Curso Desenvolvedor Web Full Stack"+
+                Description="Api feita para o projeto de conlusão do Curso Desenvolvedor Web Full Stack. "+
                 "A api contém várias entidades e relacionamentos Muito para Muitos",
                 Link="https://github.com/ArielLopes888/API.NET-Projeto-Integrador"
             },
@@ -56,7 +56,7 @@ public class ProjectController : ControllerBase
                             "Este projeto está dividido em 3 camadas: "+
                             "-Camada do Cliente (Client): Responsável pela interface do usuário. O código nesta camada é executado no navegador do usuário. "+
                             "-Camada Compartilhada (Shared): Contém o código que é compartilhado entre o cliente e o servidor. Nesse projeto contém as Entidades. "+
-                            "-Camada do Servidor (Server): Responsável por processar as solicitações do cliente e executar a lógica do aplicativo. O código nesta camada é executado no servidor e é usado para acessar bancos de dados (Nesse projeto, as controllers retrnam dados mocados para o clints).",
+                            "-Camada do Servidor (Server): Responsável por processar as solicitações do cliente e executar a lógica do aplicativo. O código nesta camada é executado no servidor e é usado para acessar bancos de dados (Nesse projeto, as controllers retornam dados mocados para o client).",
                 Link="https://github.com/ArielLopes888/BlazorPWA"
             },
             new Project
