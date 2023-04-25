@@ -7,8 +7,8 @@ namespace Shared.Entities
 {
     public class Skills
     {
-        public string Title { get; set; }
-        public List<string> Values { get; set; }
+        public string? Title { get; set; }
+        public List<string>? Values { get; set; }
 
     }
 }
