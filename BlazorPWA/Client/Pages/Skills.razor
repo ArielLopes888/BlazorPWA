@@ -1,0 +1,40 @@
+@page "/Skills"
+@inject HttpClient Http
+@using  BlazorPWA.Shared
+
+<PageTitle>Habilidades</PageTitle>
+
+
+<div class="center-box">
+  <h3>Habilidades</h3>
+</div>
+
+@if (skills != null)
+{
+  <div class="transparent-container">
+    @foreach (var x in skills)
+    {
+      <div class="transparent-box">
+        <p><strong>-</strong> @x.Title</p>
+        <p><strong></strong> @x.Values</p>
+      </div>
+    }
+  </div>
+}
+
+else
+{
+    <div class="transparent-box">
+        <p>Carregando...</p>
+    </div>
+
+}
+
+@code {
+     private Skill[]? skills;
+
+    protected override async Task OnInitializedAsync()
+    {
+        skills = await Http.GetFromJsonAsync<Skill[]>("Skill");
+    }
+}
