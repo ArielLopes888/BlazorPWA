@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BlazorPWA.Shared
 {
-    public class Skills
+    public class Skill
     {
         public string? Title { get; set; }
         public string? Values { get; set; }
