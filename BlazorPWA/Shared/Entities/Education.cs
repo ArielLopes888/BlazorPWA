@@ -7,8 +7,7 @@ namespace BlazorPWA.Shared
 {
    public class Education
     {
-        public string? University { get; set; }
+        public string? Institution { get; set; }
         public string? Course { get; set; }
-        public string? Certification { get; set; }
     }
 }

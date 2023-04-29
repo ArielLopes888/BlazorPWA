@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Shared.Entities
+namespace BlazorPWA.Shared
 {
     public class Skills
     {
         public string? Title { get; set; }
-        public List<string>? Values { get; set; }
+        public string? Values { get; set; }
 
     }
 }
