@@ -14,20 +14,31 @@ namespace Server.Controllers
             {
                 new Education
                 {
-                  University = "Centro Universitário Celso Lisboa",
+                  Institution = "Centro Universitário Celso Lisboa",
                   Course = "Análise e Desenvolvimento de Sistemas"
                 },
 
                 new Education
                 {
-                  University = "Digital House",
+                  Institution = "Digital House",
                   Course = "Desenvolvedor Full Stack C# .Net"
                 },
 
                 new Education
                 {
-                  University = "Udemy",
-                  Course = "Api Robusta + Deploy no Azure"
+                  Institution = "Udemy",
+                  Course = "Api Robusta em .Net + Azure"
+                },
+
+                new Education
+                {
+                  Institution = "Alura",
+                  Course ="HTML5 e CSS3"
+                },
+                new Education
+                {
+                  Institution = "Alura",
+                  Course ="JavaScript e HTML"
                 },
             };
             return values;
