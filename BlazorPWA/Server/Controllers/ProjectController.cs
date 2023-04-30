@@ -15,12 +15,12 @@ public class ProjectController : ControllerBase
             new Project
             {
                 Name = "Api ShopBridge",
-                Description="Esse projeto foi feito como parte de um desafio da ThinkBridge."+
-                            "A API foi escrita em C# e inclui: CRUD para gerenciar produtos em um shopping online."+
-                            "ORM Entity Framework"+
-                            "Autenticação e autorização com JWT."+
-                            "Documentação do Swagger para fácil exploração e teste de API."+
-                            "Segue os princípios de design da API RESTful."+
+                Description="Esse projeto foi feito como parte de um desafio da ThinkBridge. "+
+                            "A API foi escrita em C# e inclui: CRUD para gerenciar produtos em um shopping online; "+
+                            "ORM Entity Framework; "+
+                            "Autenticação e autorização com JWT; "+
+                            "Documentação do Swagger para fácil exploração e teste de API; "+
+                            "Segue os princípios de design da API RESTful; "+
                             "Utiliza as melhores práticas para desenvolvimento .NET, incluindo injeção de dependência, acesso a dados com Entity Framework Core e tratamento de exceções.",
                 Link="https://github.com/ArielLopes888/API_ShopBridge"
             },
@@ -28,11 +28,11 @@ public class ProjectController : ControllerBase
             {
                 Name="Api Robusta + Deploy no Azure",
                 Description="Aprendendo a construir uma API robusta e moderna utilizando .NET. Curso do Lucas Eschechola"+
-                            "A API foi escrita em C# e inclui: CRUD"+
-                            "ORM Entity Framework"+
-                            "Autenticação e autorização com JWT."+
-                            "Documentação do Swagger para fácil exploração e teste de API."+
-                            "Segue os princípios de design da API RESTful."+
+                            "A API foi escrita em C# e inclui: CRUD; "+
+                            "ORM Entity Framework; "+
+                            "Autenticação e autorização com JWT; "+
+                            "Documentação do Swagger para fácil exploração e teste de API; "+
+                            "Segue os princípios de design da API RESTful; "+
                             "Utiliza as melhores práticas para desenvolvimento .NET, incluindo injeção de dependência, acesso a dados com Entity Framework Core e tratamento de exceções.",
                 Link="https://github.com/ArielLopes888/API_ROBUSTA"
             },
@@ -40,7 +40,7 @@ public class ProjectController : ControllerBase
             {
                 Name="Api Projeto Integrador",
                 Description="Api feita para o projeto de conlusão do Curso Desenvolvedor Web Full Stack. "+
-                "A api contém várias entidades e relacionamentos Muito para Muitos",
+                "A api contém várias entidades e relacionamentos 'Muitos para Muitos'",
                 Link="https://github.com/ArielLopes888/API.NET-Projeto-Integrador"
             },
             new Project
